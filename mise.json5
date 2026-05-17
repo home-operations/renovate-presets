@@ -1,0 +1,11 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    packageRules: [
+        {
+            description: "Normalize packageName for mise github-releases tools so single-word names (`lefthook`) resolve to `lefthook/lefthook`",
+            matchFileNames: [".mise.toml", "mise.toml"],
+            matchDatasources: ["github-releases", "github-tags"],
+            overridePackageName: "{{#if (lookup (split packageName '/') 1)}}{{packageName}}{{else if (lookup (split packageName ':') 1)}}{{ lookup (split packageName ':') 1 }}/{{ lookup (split packageName ':') 1 }}{{else}}{{packageName}}/{{packageName}}{{/if}}",
+        },
+    ],
+}

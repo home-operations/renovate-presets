@@ -1,0 +1,25 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    customDatasources: {
+        "grafana-dashboards": {
+            defaultRegistryUrlTemplate: "https://grafana.com/api/dashboards/{{packageName}}",
+            format: "json",
+            transformTemplates: [
+                '{"releases":[{"version": $string(revision)}], "sourceDirectory": name}',
+            ],
+        },
+    },
+    customManagers: [
+        {
+            description: "Track grafana.com dashboard revisions referenced via `dashboards/<id>/revisions/<n>/download`",
+            customType: "regex",
+            managerFilePatterns: ["/grafanadashboard\\.ya?ml(?:\\.j2)?$/"],
+            matchStrings: [
+                "dashboards\\/(?<depName>\\d+)\\/revisions\\/(?<currentValue>\\d+)\\/download",
+            ],
+            datasourceTemplate: "custom.grafana-dashboards",
+            versioningTemplate: "regex:^(?<major>\\d+)$",
+            autoReplaceStringTemplate: "dashboards/{{depName}}/revisions/{{newValue}}/download",
+        },
+    ],
+}

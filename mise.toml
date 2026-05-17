@@ -18,9 +18,13 @@ description = "Validate Renovate presets against the schema (CI)"
 run = """
 renovate-config-validator --strict \
   default.json5 \
+  annotated.json5 \
   cnpg.json5 \
+  grafana-dashboards.json5 \
   helmfile.json5 \
   llama-cpp.json5 \
+  mise.json5 \
+  oci.json5 \
   phanpy.json5 \
   renovate-operator.json5 \
   searxng.json5 \
