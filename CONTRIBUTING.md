@@ -35,13 +35,13 @@ Each preset should:
 - Avoid bundling unrelated rules. If a quirk has a different audience, split it into a new file.
 - Prefer broad `managerFilePatterns` only when the `matchStrings` regex is specific enough to avoid false matches; otherwise scope by path.
 
-When you add a new preset, also:
+When you add a new preset:
 
-1. Add it to the available presets table in [`README.md`](./README.md).
-2. Add it to the `extends` array in [`default.json5`](./default.json5).
-3. If the preset has caveats (hardcoded versions, layout assumptions), add a short note under "Preset notes" in the README.
+1. Place it under the right category subdirectory (`managers/`, `overrides/`, or `versioning/`). Create a new subdirectory if none fit.
+2. Add it to the `extends` array in [`default.json`](./default.json).
+3. Document caveats (hardcoded values, layout assumptions, etc.) as comments in the preset file itself, near the rule they apply to. The README should not list individual presets — the directory structure is the index.
 
-The `validate` task in [`mise.toml`](./mise.toml) globs `*.json5`, so new preset files are picked up automatically.
+The `validate` task in [`mise.toml`](./mise.toml) globs each category directory, so new files are picked up automatically as long as they sit under one.
 
 # Naming guidelines
 

@@ -18,6 +18,7 @@
     ],
     packageRules: [
         {
+            // Bump the `pg18` prefix when CNPG moves to a new postgres major.
             description: "vchord-scratch uses 'pg<N>-v<semver>' prefix",
             matchDatasources: ["docker"],
             matchPackageNames: ["ghcr.io/tensorchord/vchord-scratch"],

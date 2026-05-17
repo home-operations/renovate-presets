@@ -2,6 +2,10 @@
     $schema: "https://docs.renovatebot.com/renovate-schema.json",
     customManagers: [
         {
+            // Targets `.yaml`, `.yml`, `.env`, and `.sh` files. Extend
+            // `managerFilePatterns` for other formats (TOML, JSON, INI). The
+            // regex won't capture versions embedded mid-string (e.g. inside a
+            // URL path) — use a dedicated manager for those.
             customType: "regex",
             description: "Pick up dependencies annotated with `# renovate: datasource=X depName=Y` comments (yaml/env/sh; handles `:`, `=`, YAML anchors, quoted values)",
             managerFilePatterns: [

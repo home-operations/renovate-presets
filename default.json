@@ -1,0 +1,17 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
+    "extends": [
+        "github>home-operations/renovate-presets//managers/annotated",
+        "github>home-operations/renovate-presets//managers/cnpg",
+        "github>home-operations/renovate-presets//managers/grafana-dashboards",
+        "github>home-operations/renovate-presets//managers/oci",
+        "github>home-operations/renovate-presets//managers/talos-factory",
+        "github>home-operations/renovate-presets//overrides/helmfile",
+        "github>home-operations/renovate-presets//overrides/mise",
+        "github>home-operations/renovate-presets//overrides/renovate-operator",
+        "github>home-operations/renovate-presets//versioning/llama-cpp",
+        "github>home-operations/renovate-presets//versioning/phanpy",
+        "github>home-operations/renovate-presets//versioning/searxng"
+    ]
+}

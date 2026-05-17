@@ -15,7 +15,7 @@ run = "prettier --check ."
 
 [tasks.validate]
 description = "Validate Renovate presets against the schema (CI)"
-run = "renovate-config-validator --strict *.json5 .github/renovate.json5"
+run = "renovate-config-validator --strict default.json managers/*.json5 overrides/*.json5 versioning/*.json5 .github/renovate.json5"
 
 [tasks."hooks:install"]
 description = "Install lefthook git hooks"
