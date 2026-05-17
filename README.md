@@ -64,7 +64,7 @@ If your repo has unrelated YAML with `imageName:` or `reference:` followed by an
     "customManagers": [
         {
             "customType": "regex",
-            "managerFilePatterns": ["/kubernetes/.+\\.yaml$/"],
+            "managerFilePatterns": ["/kubernetes/.+\\.ya?ml$/"],
         },
     ],
 }
@@ -74,7 +74,7 @@ The `vchord-scratch` versioning rule hardcodes `pg18`. Bump it when CNPG moves t
 
 ### `talos-factory`
 
-The custom datasource hits `https://factory.talos.dev/versions` to discover available installer versions. File pattern is `/talos\/.*\.yaml(?:\.j2)?$/`, matching the `talos/` directory convention used by [home-operations/cluster-template](https://github.com/home-operations/cluster-template) and similar layouts.
+The custom datasource hits `https://factory.talos.dev/versions` to discover available installer versions. File pattern is `/talos\/.*\.ya?ml(?:\.j2)?$/`, matching the `talos/` directory convention used by [home-operations/cluster-template](https://github.com/home-operations/cluster-template) and similar layouts.
 
 ## Contributing
 
