@@ -39,8 +39,9 @@ When you add a new preset, also:
 
 1. Add it to the available presets table in [`README.md`](./README.md).
 2. Add it to the `extends` array in [`default.json5`](./default.json5).
-3. Add the filename to the `validate` task in [`mise.toml`](./mise.toml).
-4. If the preset has caveats (hardcoded versions, layout assumptions), add a short note under "Preset notes" in the README.
+3. If the preset has caveats (hardcoded versions, layout assumptions), add a short note under "Preset notes" in the README.
+
+The `validate` task in [`mise.toml`](./mise.toml) globs `*.json5`, so new preset files are picked up automatically.
 
 # Naming guidelines
 
