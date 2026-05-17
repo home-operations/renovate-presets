@@ -2,9 +2,14 @@
 parallel = true
 
 [pre-commit.commands.prettier]
-glob = "*.{json,json5,md,yml,yaml}"
-run = "mise run format:check {staged_files}"
+glob = "*.{json,json5}"
+run = "prettier --check {staged_files}"
 
 [pre-commit.commands.renovate-config-validator]
 glob = "*.json5"
-run = "mise run validate {staged_files}"
+run = "renovate-config-validator --strict {staged_files}"
+
+[pre-commit.commands.format-yaml]
+run = "yamlfmt {staged_files}"
+glob = ["*.yaml"]
+stage_fixed = true

@@ -1,17 +1,24 @@
 # https://mise.jdx.dev/configuration.html
 [tools]
-lefthook = "2.1.6"
+"aqua:evilmartians/lefthook" = "2.1.6"
+"aqua:google/yamlfmt" = "0.21.0"
 node = "24.15.0"
 "npm:prettier" = "3.8.3"
 "npm:renovate" = "43.150.0"
 
 [tasks.format]
-description = "Format files (defaults to all)"
-run = "prettier --write"
+description = "Format all JSON/JSON5 and YAML files"
+run = [
+  "prettier --write .",
+  "yamlfmt",
+]
 
 [tasks."format:check"]
-description = "Check formatting (defaults to all)"
-run = "prettier --check"
+description = "Check all JSON/JSON5 and YAML formatting"
+run = [
+  "prettier --check .",
+  "yamlfmt -lint",
+]
 
 [tasks.validate]
 description = "Validate Renovate presets against the schema"

@@ -32,7 +32,7 @@ jobs:
           experimental: true
 
       - name: Check formatting
-        run: mise run format:check .
+        run: mise run format:check
 
       - name: Validate Renovate presets
         run: mise run validate default.json managers/*.json5 overrides/*.json5 versioning/*.json5 .renovaterc.json5
