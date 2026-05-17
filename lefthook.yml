@@ -1,0 +1,10 @@
+# https://lefthook.dev/configuration/
+pre-commit:
+    parallel: true
+    commands:
+        prettier:
+            glob: "*.{json,json5,md,yml,yaml}"
+            run: prettier --check {staged_files}
+        renovate-config-validator:
+            glob: "*.json5"
+            run: renovate-config-validator --strict {staged_files}

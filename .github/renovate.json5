@@ -1,0 +1,23 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    extends: [
+        "config:recommended",
+        ":dependencyDashboard",
+        ":semanticCommits",
+        ":automergeMinor",
+        ":automergeDigest",
+    ],
+    packageRules: [
+        {
+            description: "Group GitHub Actions updates",
+            matchManagers: ["github-actions"],
+            groupName: "github-actions",
+        },
+        {
+            description: "Group dev dependencies",
+            matchManagers: ["npm"],
+            matchDepTypes: ["devDependencies"],
+            groupName: "npm dev dependencies",
+        },
+    ],
+}

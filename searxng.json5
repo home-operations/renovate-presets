@@ -1,0 +1,11 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    packageRules: [
+        {
+            description: "searxng tags are shaped semver/calver + '-<commit-sha>' (sha varies per release so default compatibility logic blocks updates)",
+            matchDatasources: ["docker"],
+            matchPackageNames: ["ghcr.io/searxng/searxng"],
+            versioning: "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-[a-f0-9]+$",
+        },
+    ],
+}

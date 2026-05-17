@@ -1,0 +1,13 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    description: "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
+    extends: [
+        "github>home-operations/renovate-presets:cnpg",
+        "github>home-operations/renovate-presets:helmfile",
+        "github>home-operations/renovate-presets:llama-cpp",
+        "github>home-operations/renovate-presets:phanpy",
+        "github>home-operations/renovate-presets:renovate-operator",
+        "github>home-operations/renovate-presets:searxng",
+        "github>home-operations/renovate-presets:talos-factory",
+    ],
+}

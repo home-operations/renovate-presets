@@ -1,0 +1,32 @@
+# https://mise.jdx.dev/configuration.html
+[tools]
+node = "22"
+lefthook = "1"
+"npm:prettier" = "3"
+"npm:renovate" = "41"
+
+[tasks.format]
+description = "Format all files"
+run = "prettier --write ."
+
+[tasks."format:check"]
+description = "Check formatting (CI)"
+run = "prettier --check ."
+
+[tasks.validate]
+description = "Validate Renovate presets against the schema (CI)"
+run = """
+renovate-config-validator --strict \
+  default.json5 \
+  cnpg.json5 \
+  helmfile.json5 \
+  llama-cpp.json5 \
+  phanpy.json5 \
+  renovate-operator.json5 \
+  searxng.json5 \
+  talos-factory.json5
+"""
+
+[tasks."hooks:install"]
+description = "Install lefthook git hooks"
+run = "lefthook install"
