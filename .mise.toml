@@ -1,7 +1,7 @@
 # https://mise.jdx.dev/configuration.html
 [tools]
-node = "22.18.0"
 lefthook = "2.1.6"
+node = "24.15.0"
 "npm:prettier" = "3.8.3"
 "npm:renovate" = "41.173.1"
 
