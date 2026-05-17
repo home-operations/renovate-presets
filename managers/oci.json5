@@ -1,12 +1,12 @@
 {
-    $schema: "https://docs.renovatebot.com/renovate-schema.json",
-    customManagers: [
-        {
-            customType: "regex",
-            description: "Pick up `oci://...` URI references (Flux OCIRepository, Helm OCI charts, ...)",
-            managerFilePatterns: ["/\\.ya?ml(?:\\.j2)?$/"],
-            matchStrings: ["oci://(?<depName>[^:]+):(?<currentValue>\\S+)"],
-            datasourceTemplate: "docker",
-        },
-    ],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  customManagers: [
+    {
+      customType: "regex",
+      description: "Pick up `oci://...` URI references (Flux OCIRepository, Helm OCI charts, ...)",
+      managerFilePatterns: ["/\\.ya?ml(?:\\.j2)?$/"],
+      matchStrings: ["oci://(?<depName>[^:]+):(?<currentValue>\\S+)"],
+      datasourceTemplate: "docker",
+    },
+  ],
 }

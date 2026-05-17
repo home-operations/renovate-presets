@@ -1,11 +1,11 @@
 {
-    $schema: "https://docs.renovatebot.com/renovate-schema.json",
-    packageRules: [
-        {
-            description: "llama.cpp uses build-number tags with variant prefix (intel, vulkan, ...). Capture the variant as 'compatibility' so Renovate only proposes upgrades within the same variant stream.",
-            matchDatasources: ["docker"],
-            matchPackageNames: ["ghcr.io/ggml-org/llama.cpp"],
-            versioning: "regex:^server-(?<compatibility>[a-z]+)-b(?<patch>\\d+)$",
-        },
-    ],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "llama.cpp uses build-number tags with variant prefix (intel, vulkan, ...). Capture the variant as 'compatibility' so Renovate only proposes upgrades within the same variant stream.",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["ghcr.io/ggml-org/llama.cpp"],
+      versioning: "regex:^server-(?<compatibility>[a-z]+)-b(?<patch>\\d+)$",
+    },
+  ],
 }

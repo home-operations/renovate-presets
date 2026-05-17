@@ -1,11 +1,11 @@
 {
-    $schema: "https://docs.renovatebot.com/renovate-schema.json",
-    packageRules: [
-        {
-            description: "Override Helmfile dependency name to the full package name",
-            matchDatasources: ["docker"],
-            matchManagers: ["helmfile"],
-            overrideDepName: "{{packageName}}",
-        },
-    ],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "Override Helmfile dependency name to the full package name",
+      matchDatasources: ["docker"],
+      matchManagers: ["helmfile"],
+      overrideDepName: "{{packageName}}",
+    },
+  ],
 }

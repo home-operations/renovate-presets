@@ -1,17 +1,17 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "description": "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
-    "extends": [
-        "github>home-operations/renovate-presets//managers/annotated.json5",
-        "github>home-operations/renovate-presets//managers/cnpg.json5",
-        "github>home-operations/renovate-presets//managers/grafana-dashboards.json5",
-        "github>home-operations/renovate-presets//managers/oci.json5",
-        "github>home-operations/renovate-presets//managers/talos-factory.json5",
-        "github>home-operations/renovate-presets//overrides/helmfile.json5",
-        "github>home-operations/renovate-presets//overrides/mise.json5",
-        "github>home-operations/renovate-presets//overrides/renovate-operator.json5",
-        "github>home-operations/renovate-presets//versioning/llama-cpp.json5",
-        "github>home-operations/renovate-presets//versioning/phanpy.json5",
-        "github>home-operations/renovate-presets//versioning/searxng.json5"
-    ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
+  "extends": [
+    "github>home-operations/renovate-presets//managers/annotated.json5",
+    "github>home-operations/renovate-presets//managers/cnpg.json5",
+    "github>home-operations/renovate-presets//managers/grafana-dashboards.json5",
+    "github>home-operations/renovate-presets//managers/oci.json5",
+    "github>home-operations/renovate-presets//managers/talos-factory.json5",
+    "github>home-operations/renovate-presets//overrides/helmfile.json5",
+    "github>home-operations/renovate-presets//overrides/mise.json5",
+    "github>home-operations/renovate-presets//overrides/renovate-operator.json5",
+    "github>home-operations/renovate-presets//versioning/llama-cpp.json5",
+    "github>home-operations/renovate-presets//versioning/phanpy.json5",
+    "github>home-operations/renovate-presets//versioning/searxng.json5"
+  ]
 }

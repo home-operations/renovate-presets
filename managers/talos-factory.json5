@@ -1,32 +1,32 @@
 {
-    $schema: "https://docs.renovatebot.com/renovate-schema.json",
-    customDatasources: {
-        "talos-factory": {
-            defaultRegistryUrlTemplate: "https://factory.talos.dev/versions",
-            format: "json",
-            transformTemplates: ['{"releases": [$.{"version": $}]}'],
-        },
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  customDatasources: {
+    "talos-factory": {
+      defaultRegistryUrlTemplate: "https://factory.talos.dev/versions",
+      format: "json",
+      transformTemplates: ['{"releases": [$.{"version": $}]}'],
     },
-    customManagers: [
-        {
-            // File pattern targets the `talos/` directory convention used by
-            // home-operations/cluster-template and similar layouts. Override
-            // `managerFilePatterns` if your Talos configs live elsewhere.
-            description: "Process Talos Factory installer images",
-            customType: "regex",
-            managerFilePatterns: ["/talos\\/.*\\.ya?ml(?:\\.j2)?$/"],
-            matchStrings: ["factory\\.talos\\.dev\\/[^/]+\\/[^:]+:(?<currentValue>v\\S+)"],
-            datasourceTemplate: "custom.talos-factory",
-            versioningTemplate: "semver",
-            depNameTemplate: "siderolabs/talos",
-        },
-    ],
-    packageRules: [
-        {
-            addLabels: ["renovate/talos"],
-            matchDatasources: ["custom.talos-factory"],
-            semanticCommitScope: "container",
-            commitMessageTopic: "{{depName}}",
-        },
-    ],
+  },
+  customManagers: [
+    {
+      // File pattern targets the `talos/` directory convention used by
+      // home-operations/cluster-template and similar layouts. Override
+      // `managerFilePatterns` if your Talos configs live elsewhere.
+      description: "Process Talos Factory installer images",
+      customType: "regex",
+      managerFilePatterns: ["/talos\\/.*\\.ya?ml(?:\\.j2)?$/"],
+      matchStrings: ["factory\\.talos\\.dev\\/[^/]+\\/[^:]+:(?<currentValue>v\\S+)"],
+      datasourceTemplate: "custom.talos-factory",
+      versioningTemplate: "semver",
+      depNameTemplate: "siderolabs/talos",
+    },
+  ],
+  packageRules: [
+    {
+      addLabels: ["renovate/talos"],
+      matchDatasources: ["custom.talos-factory"],
+      semanticCommitScope: "container",
+      commitMessageTopic: "{{depName}}",
+    },
+  ],
 }

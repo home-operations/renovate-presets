@@ -3,8 +3,8 @@ parallel = true
 
 [pre-commit.commands.prettier]
 glob = "*.{json,json5,md,yml,yaml}"
-run = "mise exec -- prettier --check {staged_files}"
+run = "mise run format:check {staged_files}"
 
 [pre-commit.commands.renovate-config-validator]
 glob = "*.json5"
-run = "mise exec -- renovate-config-validator --strict {staged_files}"
+run = "mise run validate {staged_files}"

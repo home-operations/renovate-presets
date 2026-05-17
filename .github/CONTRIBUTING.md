@@ -19,7 +19,7 @@ If AI is used to generate any portion of a change, contributors must adhere to t
 Before submitting your PR:
 
 - Search for existing PRs and issues to prevent duplicating efforts.
-- Run `mise run format:check` and `mise run validate` and make sure both pass.
+- Let the pre-commit hooks run, or invoke `mise run format:check .` and `mise run validate <paths>` manually, and make sure both pass.
 - Create separate PRs for each preset or fix, and avoid combining unrelated changes.
 - For intricate changes (new datasource, broad regex managers, anything that touches `default.json5`), consider opening an issue first to align expectations.
 - Use [Conventional Commits](https://www.conventionalcommits.org/).
@@ -41,7 +41,7 @@ When you add a new preset:
 2. Add it to the `extends` array in [`default.json`](./default.json).
 3. Document caveats (hardcoded values, layout assumptions, etc.) as comments in the preset file itself, near the rule they apply to. The README should not list individual presets — the directory structure is the index.
 
-The `validate` task in [`mise.toml`](./mise.toml) globs each category directory, so new files are picked up automatically as long as they sit under one.
+The `validate` step in [`.github/workflows/validate.yaml`](./workflows/validate.yaml) globs each category directory, so new files are picked up automatically as long as they sit under one.
 
 # Naming guidelines
 
@@ -51,26 +51,24 @@ The `validate` task in [`mise.toml`](./mise.toml) globs each category directory,
 
 # Development
 
-Tooling is managed by [mise](https://mise.jdx.dev). The repo uses [lefthook](https://lefthook.dev) for pre-commit hooks and [GitHub Actions](./.github/workflows/validate.yml) for CI.
+Tooling is managed by [mise](https://mise.jdx.dev). The repo uses [lefthook](https://lefthook.dev) for pre-commit hooks and [GitHub Actions](./workflows/validate.yaml) for CI.
 
 ```sh
-# Install all tools pinned in mise.toml (node, lefthook, prettier, renovate)
+# Install all tools pinned in .mise.toml (node, lefthook, prettier, renovate).
+# A postinstall hook also runs `lefthook install` to wire up the git hooks.
 mise install
 
-# Install git hooks (one-time, after first mise install)
-mise run hooks:install
+# Format files (pass paths, or `.` for everything)
+mise run format .
 
-# Format all files
-mise run format
+# Check formatting (CI runs this against `.`)
+mise run format:check .
 
-# Check formatting (CI runs this)
-mise run format:check
-
-# Validate every preset against Renovate's schema (CI runs this)
-mise run validate
+# Validate presets against Renovate's schema (CI passes the category globs)
+mise run validate default.json managers/*.json5 overrides/*.json5 versioning/*.json5 .github/renovate.json5
 ```
 
-Pre-commit hooks run [Prettier](https://prettier.io) and [`renovate-config-validator`](https://docs.renovatebot.com/config-validation/) on staged files. CI re-runs both across the whole repo via [`jdx/mise-action`](https://github.com/jdx/mise-action).
+Pre-commit hooks invoke the same `format:check` and `validate` tasks, passing only the staged files. CI re-runs both across the whole repo via [`jdx/mise-action`](https://github.com/jdx/mise-action).
 
 # Documentation
 
