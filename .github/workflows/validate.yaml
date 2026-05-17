@@ -31,8 +31,8 @@ jobs:
         with:
           experimental: true
 
-      - name: Check formatting
-        run: mise run format:check
+      - name: Lint
+        run: mise run lint:check
 
       - name: Validate Renovate presets
         run: mise run validate default.json managers/*.json5 overrides/*.json5 versioning/*.json5 .renovaterc.json5
