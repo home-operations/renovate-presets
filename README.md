@@ -19,11 +19,11 @@ The bare repo reference loads [`default.json`](./default.json), which extends ev
 
 ### Extend specific presets
 
-Use Renovate's path-based preset syntax (`//path/to/preset`, no `.json5` extension):
+Use Renovate's path-based preset syntax (include the `.json5` extension since Renovate's default resolver only tries `.json`):
 
 ```jsonc
 {
-    "extends": ["github>home-operations/renovate-presets//managers/cnpg"],
+    "extends": ["github>home-operations/renovate-presets//managers/cnpg.json5"],
 }
 ```
 
