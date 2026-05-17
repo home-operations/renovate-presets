@@ -13,3 +13,7 @@ run = "renovate-config-validator --strict {staged_files}"
 run = "yamlfmt {staged_files}"
 glob = ["*.yaml"]
 stage_fixed = true
+
+[pre-commit.commands.shellcheck]
+glob = "*.sh"
+run = "shellcheck {staged_files}"
