@@ -42,11 +42,3 @@ Presets are grouped by intent. Each file is self-documenting — open it for the
 - [`versioning/`](./versioning) — custom `versioning` schemes for upstreams that ship non-semver tags.
 
 [`default.json`](./default.json) lists every preset that ships in this repo.
-
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for the AI usage policy, PR workflow, preset guidelines, and local development setup.
-
-## License
-
-[MIT](./LICENSE)
