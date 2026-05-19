@@ -43,5 +43,10 @@
       semanticCommitScope: "github-release",
       commitMessageTopic: "release {{depName}}",
     },
+    {
+      matchManagers: ["renovate-config"],
+      semanticCommitScope: "renovate-config",
+      commitMessageTopic: "config {{depName}}",
+    },
   ],
 }
