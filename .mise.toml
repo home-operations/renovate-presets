@@ -1,6 +1,6 @@
 # https://mise.jdx.dev/configuration.html
 [tools]
-"aqua:evilmartians/lefthook" = "2.1.6"
+"aqua:evilmartians/lefthook" = "2.1.8"
 "aqua:google/yamlfmt" = "0.21.0"
 "aqua:koalaman/shellcheck" = "0.11.0"
 node = "24.15.0"
