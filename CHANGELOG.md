@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/home-operations/renovate-presets/compare/1.0.1...1.0.2) (2026-05-19)
+
+
+### Miscellaneous Chores
+
+* add renovate config semantic commit ([718abcf](https://github.com/home-operations/renovate-presets/commit/718abcf7f1c5d67b5392166a1fb86b8e38b398be))
+
 ## [1.0.1](https://github.com/home-operations/renovate-presets/compare/1.0.0...1.0.1) (2026-05-19)
 
 
