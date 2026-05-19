@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.1](https://github.com/home-operations/renovate-presets/compare/1.0.0...1.0.1) (2026-05-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency aqua:evilmartians/lefthook ( 2.1.6 ➔ 2.1.8 ) ([#8](https://github.com/home-operations/renovate-presets/issues/8)) ([a88730d](https://github.com/home-operations/renovate-presets/commit/a88730d64f22f5c722004d3ec24a39b215fcb253))
+
+
+### Miscellaneous Chores
+
+* dogfood renovate preset ([45c6e41](https://github.com/home-operations/renovate-presets/commit/45c6e41d85568ebdc5da2a984133dd6ff2bc4c31))
+* feedback from [@buroa](https://github.com/buroa) ([2e1c2fc](https://github.com/home-operations/renovate-presets/commit/2e1c2fc34a25e056dd7a44f99bbb5c6b1da707b4))
+* ignore devcontainers in release-please config ([427889b](https://github.com/home-operations/renovate-presets/commit/427889b366990c1b547d00187cf75557c549442e))
+* ignore self config in release-please config ([6d4d23b](https://github.com/home-operations/renovate-presets/commit/6d4d23b80981ff362b5973ad21cd3fbae29d50b5))
+
 ## 1.0.0 (2026-05-19)
 
 
