@@ -4,13 +4,15 @@
   "extends": [
     "github>home-operations/renovate-presets//managers/annotated.json5",
     "github>home-operations/renovate-presets//managers/cnpg.json5",
-    "github>home-operations/renovate-presets//managers/grafana-dashboards.json5",
+    "github>home-operations/renovate-presets//managers/grafanaDashboards.json5",
     "github>home-operations/renovate-presets//managers/oci.json5",
-    "github>home-operations/renovate-presets//managers/talos-factory.json5",
+    "github>home-operations/renovate-presets//managers/talosFactory.json5",
+    "github>home-operations/renovate-presets//overrides/changelogs.json5",
     "github>home-operations/renovate-presets//overrides/helmfile.json5",
     "github>home-operations/renovate-presets//overrides/mise.json5",
-    "github>home-operations/renovate-presets//overrides/renovate-operator.json5",
-    "github>home-operations/renovate-presets//versioning/llama-cpp.json5",
+    "github>home-operations/renovate-presets//overrides/renovateOperator.json5",
+    "github>home-operations/renovate-presets//policies/semanticCommits.json5",
+    "github>home-operations/renovate-presets//versioning/llamacpp.json5",
     "github>home-operations/renovate-presets//versioning/phanpy.json5",
     "github>home-operations/renovate-presets//versioning/searxng.json5"
   ]

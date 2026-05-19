@@ -1,0 +1,20 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "Point 1Password Connect at its upstream changelog",
+      matchPackageNames: ["/1password/"],
+      changelogUrl: "https://github.com/1Password/connect/blob/main/CHANGELOG.md",
+    },
+    {
+      description: "Point Cloudflared at its upstream release notes",
+      matchPackageNames: ["/cloudflared/"],
+      changelogUrl: "https://github.com/cloudflare/cloudflared/blob/master/RELEASE_NOTES",
+    },
+    {
+      description: "Point Spegel at its upstream changelog",
+      matchPackageNames: ["/spegel/"],
+      changelogUrl: "https://github.com/spegel-org/spegel/blob/main/CHANGELOG.md",
+    },
+  ],
+}

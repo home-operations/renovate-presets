@@ -2,14 +2,22 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   customManagers: [
     {
-      // Targets `.yaml`, `.yml`, `.env`, and `.sh` files. Extend
-      // `managerFilePatterns` for other formats (TOML, JSON, INI). The
-      // regex won't capture versions embedded mid-string (e.g. inside a
-      // URL path) — use a dedicated manager for those.
       customType: "regex",
-      description: "Pick up dependencies annotated with `# renovate: datasource=X depName=Y` comments (yaml/env/sh; handles `:`, `=`, YAML anchors, quoted values)",
-      managerFilePatterns: ["/\\.env(?:\\.j2)?$/", "/\\.sh(?:\\.j2)?$/", "/\\.ya?ml(?:\\.j2)?$/"],
+      description: "Process annotated dependencies",
+      managerFilePatterns: ["/\\.env(?:\\.j2)?$/", "/\\.sh(?:\\.j2)?$/", "/\\.yaml(?:\\.j2)?$/"],
       matchStrings: [
+        // # renovate: datasource=github-releases depName=foo/bar
+        // foobar_version: v1.0.0
+        // # renovate: datasource=github-releases depName=foo/bar
+        // foobar_version: "v1.0.0"
+        // # renovate: datasource=github-releases depName=foo/bar
+        // foobar_version: &version v1.0.0
+        // # renovate: datasource=github-releases depName=foo/bar
+        // foobar_version: &version "v1.0.0"
+        // # renovate: datasource=docker depName=ghcr.io/foo/bar
+        // FOOBAR_VERSION=v1.0.0
+        // # renovate: datasource=docker depName=ghcr.io/foo/bar
+        // FOOBAR_VERSION="v1.0.0"
         "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.+(:\\s|=)(&\\S+\\s)?[\"']?(?<currentValue>[^\"'\\s]+)[\"']?",
       ],
       datasourceTemplate: "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",

@@ -2,7 +2,7 @@
 import { readdirSync, writeFileSync } from "node:fs";
 
 const REPO = "home-operations/renovate-presets";
-const DIRS = ["managers", "overrides", "versioning"];
+const DIRS = ["managers", "overrides", "policies", "versioning"];
 
 const extendsList = DIRS.flatMap((dir) =>
   readdirSync(dir)
