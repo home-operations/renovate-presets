@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/home-operations/renovate-presets/compare/1.0.2...1.1.0) (2026-05-19)
+
+
+### Features
+
+* add default dependencyDashboardTitle ([e0cc91e](https://github.com/home-operations/renovate-presets/commit/e0cc91e8cb484624e781b483ff00d8e8b346f762))
+
+
+### Miscellaneous Chores
+
+* add mise lockfile and update hooks ([a23a284](https://github.com/home-operations/renovate-presets/commit/a23a284639c1a93f0624deb77478cf2b7cda942b))
+
 ## [1.0.2](https://github.com/home-operations/renovate-presets/compare/1.0.1...1.0.2) (2026-05-19)
 
 
