@@ -2,6 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
   "extends": [
+    "github>home-operations/renovate-presets//config/dependencyDashboard.json5",
     "github>home-operations/renovate-presets//config/managerFilePatterns.json5",
     "github>home-operations/renovate-presets//config/registryAliases.json5",
     "github>home-operations/renovate-presets//managers/annotated.json5",

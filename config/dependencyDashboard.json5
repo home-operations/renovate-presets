@@ -1,0 +1,5 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Brand the Renovate dependency dashboard issue with a distinctive title so it's easy to spot among other issues.",
+  dependencyDashboardTitle: "Renovate Dashboard 🤖",
+}
