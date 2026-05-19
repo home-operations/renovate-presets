@@ -3,6 +3,7 @@
   "release-type": "simple",
   "exclude-paths": [
     ".mise.toml",
+    "mise.lock",
     ".github",
     ".devcontainer",
     "release-please-config.json",
