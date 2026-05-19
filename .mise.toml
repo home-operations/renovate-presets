@@ -1,7 +1,4 @@
 # https://mise.jdx.dev/configuration.html
-[settings]
-locked = true
-
 [tools]
 "aqua:evilmartians/lefthook" = "2.1.8"
 "aqua:google/yamlfmt" = "0.21.0"
