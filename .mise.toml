@@ -1,12 +1,12 @@
 # https://mise.jdx.dev/configuration.html
 [tools]
-"aqua:evilmartians/lefthook" = "2.1.8"
-"aqua:google/yamlfmt" = "0.21.0"
-"aqua:koalaman/shellcheck" = "0.11.0"
-"aqua:zizmorcore/zizmor" = "1.25.2"
-node = "24.15.0"
-"npm:prettier" = "3.8.3"
+lefthook = "2.1.8"
+node = "26.1.0"
 "npm:renovate" = "43.150.0"
+prettier = "3.8.3"
+shellcheck = "0.11.0"
+yamlfmt = "0.21.0"
+zizmor = "1.25.2"
 
 [tasks.gen]
 description = "Regenerate default.json from the preset directories"
