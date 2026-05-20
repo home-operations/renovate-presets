@@ -30,7 +30,7 @@ Use Renovate's path-based preset syntax (include the `.json5` extension since Re
 ### Pin to a tag or commit
 
 ```jsonc
-"extends": ["github>home-operations/renovate-presets#v1.0.0"]
+"extends": ["github>home-operations/renovate-presets#1.0.0"]
 ```
 
 ## Available presets
