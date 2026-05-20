@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/home-operations/renovate-presets/compare/1.2.0...1.3.0) (2026-05-20)
+
+
+### Features
+
+* add j2 helmfile and kustomize to manager file patterns ([18b9116](https://github.com/home-operations/renovate-presets/commit/18b911654a2df1c1f36b3c380763e2088f499ed0))
+
+
+### Miscellaneous Chores
+
+* shorten mise tool names and pin to semver ([ced5af0](https://github.com/home-operations/renovate-presets/commit/ced5af0bec42d5f9e9881379a004fcde89c19264))
+
 ## [1.2.0](https://github.com/home-operations/renovate-presets/compare/1.1.0...1.2.0) (2026-05-20)
 
 
