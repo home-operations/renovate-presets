@@ -13,13 +13,6 @@ description = "Regenerate default.json from the preset directories"
 run = "node scripts/gen-default.mjs"
 
 [tasks.lint]
-description = "Lint and fix JSON/JSON5 and YAML files"
-run = [
-  "prettier --write .",
-  "yamlfmt",
-]
-
-[tasks."lint:check"]
 description = "Check JSON/JSON5, YAML, and shell formatting"
 run = [
   "prettier --check .",
