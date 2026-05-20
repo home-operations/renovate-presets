@@ -7,7 +7,16 @@
   "helm-values": {
     managerFilePatterns: ["/\\.ya?ml(?:\\.j2)?$/"],
   },
+  helmfile: {
+    managerFilePatterns: [
+      "/(^|/)helmfile\\.ya?ml(?:\\.gotmpl)?(?:\\.j2)?$/",
+      "/(^|/)helmfile\\.d/.+\\.ya?ml(?:\\.gotmpl)?(?:\\.j2)?$/",
+    ],
+  },
   kubernetes: {
     managerFilePatterns: ["/\\.ya?ml(?:\\.j2)?$/"],
+  },
+  kustomize: {
+    managerFilePatterns: ["/(^|/)kustomization\\.ya?ml(?:\\.j2)?$/"],
   },
 }
