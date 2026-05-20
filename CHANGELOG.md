@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/home-operations/renovate-presets/compare/1.1.0...1.2.0) (2026-05-20)
+
+
+### Features
+
+* add baseConfig ([f3be204](https://github.com/home-operations/renovate-presets/commit/f3be204ef61725e2aa5d9f1c0387c7cd084727ee))
+
+
+### Miscellaneous Chores
+
+* drop strict lockfile mode to unblock Renovate ([e45aee9](https://github.com/home-operations/renovate-presets/commit/e45aee9cddad0b635be28bd0ea20b5972e803ff0))
+* enable strict lockfile mode ([7132740](https://github.com/home-operations/renovate-presets/commit/71327405dac26d1d82a7a59144b31c1f27e1be2c))
+* extend lefthook from .github, split editorconfig, mise fmt ([5de51aa](https://github.com/home-operations/renovate-presets/commit/5de51aad4eb78ace0d87e616dc8469b56128985a))
+* remove repo-only grouping ([6b3553b](https://github.com/home-operations/renovate-presets/commit/6b3553b7e5c428d518e0325c195dfae90b51cd71))
+
 ## [1.1.0](https://github.com/home-operations/renovate-presets/compare/1.0.2...1.1.0) (2026-05-19)
 
 
