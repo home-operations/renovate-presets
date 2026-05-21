@@ -11,10 +11,5 @@
       matchPackageNames: ["/cloudflared/"],
       changelogUrl: "https://github.com/cloudflare/cloudflared/blob/master/RELEASE_NOTES",
     },
-    {
-      description: "Point Spegel at its upstream changelog",
-      matchPackageNames: ["/spegel/"],
-      changelogUrl: "https://github.com/spegel-org/spegel/blob/main/CHANGELOG.md",
-    },
   ],
 }
