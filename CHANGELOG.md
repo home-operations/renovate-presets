@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.1](https://github.com/home-operations/renovate-presets/compare/1.3.0...1.3.1) (2026-05-21)
+
+
+### Bug Fixes
+
+* delete Spegel changelog entry ([899f5c1](https://github.com/home-operations/renovate-presets/commit/899f5c1f4ad299d5817be8aa82045450809c8d1e))
+
+
+### Miscellaneous Chores
+
+* no v prefix ([2f2464d](https://github.com/home-operations/renovate-presets/commit/2f2464d525e5dd0078625cd72d8eb8dd8e26f7ab))
+
 ## [1.3.0](https://github.com/home-operations/renovate-presets/compare/1.2.0...1.3.0) (2026-05-20)
 
 
