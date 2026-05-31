@@ -1,4 +1,4 @@
-LICENSE
-*.md
-*.yml
-*.yaml
+*.toml
+CHANGELOG.md
+.release-please-manifest.json
+default.json

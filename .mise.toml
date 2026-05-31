@@ -2,10 +2,9 @@
 [tools]
 lefthook = "2.1.9"
 node = "26.2.0"
+oxfmt = "0.52.0"
 "npm:renovate" = "43.150.0"
-prettier = "3.8.3"
 shellcheck = "0.11.0"
-yamlfmt = "0.21.0"
 zizmor = "1.25.2"
 
 [tasks.gen]
@@ -13,10 +12,9 @@ description = "Regenerate default.json from the preset directories"
 run = "node scripts/gen-default.mjs"
 
 [tasks.lint]
-description = "Check JSON/JSON5, YAML, and shell formatting"
+description = "Check JSON/JSON5, YAML, Markdown, and shell formatting"
 run = [
-  "prettier --check .",
-  "yamlfmt -lint",
+  "oxfmt --check .",
   "git ls-files -co --exclude-standard '*.sh' | xargs -r shellcheck",
 ]
 

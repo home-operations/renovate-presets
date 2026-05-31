@@ -3,10 +3,6 @@ git_url = "https://github.com/home-operations/.github"
 ref = "main"
 configs = ["lefthook.common.toml"]
 
-[pre-commit.commands.prettier]
-glob = ["*.json", "*.json5"]
-run = "prettier --check {staged_files}"
-
 [pre-commit.commands.renovate-config-validator]
 glob = ["*.json5"]
 run = "renovate-config-validator --strict {staged_files}"
