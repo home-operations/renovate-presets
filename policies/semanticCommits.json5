@@ -19,7 +19,7 @@
     },
     {
       matchUpdateTypes: ["digest"],
-      semanticCommitType: "chore",
+      semanticCommitType: "fix",
       commitMessageExtra: "({{currentDigestShort}} ➔ {{newDigestShort}})",
     },
     {
@@ -40,13 +40,21 @@
     },
     {
       matchDatasources: ["github-releases"],
+      semanticCommitType: "chore",
       semanticCommitScope: "github-release",
       commitMessageTopic: "release {{depName}}",
     },
     {
       matchManagers: ["renovate-config"],
+      semanticCommitType: "chore",
       semanticCommitScope: "renovate-config",
       commitMessageTopic: "config {{depName}}",
+    },
+    {
+      matchManagers: ["mise"],
+      semanticCommitType: "chore",
+      semanticCommitScope: "mise",
+      commitMessageTopic: "tool {{depName}}",
     },
   ],
 }
