@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.0.0](https://github.com/home-operations/renovate-presets/compare/1.3.1...2.0.0) (2026-06-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* digests are fix and add mise semantic commit
+
+### Features
+
+* **deps:** update dependency oxfmt (0.52.0 ➔ 0.53.0) ([#24](https://github.com/home-operations/renovate-presets/issues/24)) ([23731d9](https://github.com/home-operations/renovate-presets/commit/23731d93ca77cc6e2b3857e5c2de4233273ca443))
+* **deps:** update dependency oxfmt (0.53.0 ➔ 0.54.0) ([#27](https://github.com/home-operations/renovate-presets/issues/27)) ([71f02c7](https://github.com/home-operations/renovate-presets/commit/71f02c7fe040cbd486f8f03a675c80ad31531ef2))
+* **deps:** update node.js (26.1.0 ➔ v26.2.0) ([#18](https://github.com/home-operations/renovate-presets/issues/18)) ([148e918](https://github.com/home-operations/renovate-presets/commit/148e918df95a095d181f77e85beb752703d07153))
+* **deps:** update node.js (26.2.0 ➔ v26.3.0) ([#23](https://github.com/home-operations/renovate-presets/issues/23)) ([7f39302](https://github.com/home-operations/renovate-presets/commit/7f39302568ae4d5f8cf4c56988b1a3c7f7c89bcc))
+* digests are fix and add mise semantic commit ([73c34a5](https://github.com/home-operations/renovate-presets/commit/73c34a5cee3e3b21407fec39078205a24a2f11af))
+
+
+### Bug Fixes
+
+* do not add labels to talos datasource PRs ([9fc6726](https://github.com/home-operations/renovate-presets/commit/9fc6726ba78edb321f1891fb12f816b5210195fe))
+* **github-release:** update release lefthook (2.1.8 ➔ 2.1.9) ([#22](https://github.com/home-operations/renovate-presets/issues/22)) ([3f781c6](https://github.com/home-operations/renovate-presets/commit/3f781c6330c1a0a68cc568ea69a7ebe231bcaf76))
+
 ## [1.3.1](https://github.com/home-operations/renovate-presets/compare/1.3.0...1.3.1) (2026-05-21)
 
 
