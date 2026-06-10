@@ -23,7 +23,6 @@
   ],
   packageRules: [
     {
-      addLabels: ["renovate/talos"],
       matchDatasources: ["custom.talos-factory"],
       semanticCommitScope: "container",
       commitMessageTopic: "{{depName}}",
