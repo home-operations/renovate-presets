@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/home-operations/renovate-presets/compare/2.0.0...2.0.1) (2026-06-22)
+
+
+### Bug Fixes
+
+* update managerFilePatterns to match all files ([15ebbca](https://github.com/home-operations/renovate-presets/commit/15ebbcaa789e23b8efe32252b0d8f68602b15157))
+
 ## [2.0.0](https://github.com/home-operations/renovate-presets/compare/1.3.1...2.0.0) (2026-06-10)
 
 
