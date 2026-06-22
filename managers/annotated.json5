@@ -4,7 +4,7 @@
     {
       customType: "regex",
       description: "Process annotated dependencies",
-      managerFilePatterns: ["/\\.env(?:\\.j2)?$/", "/\\.sh(?:\\.j2)?$/", "/\\.yaml(?:\\.j2)?$/"],
+      managerFilePatterns: ["/.*/"],
       matchStrings: [
         // # renovate: datasource=github-releases depName=foo/bar
         // foobar_version: v1.0.0
