@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/home-operations/renovate-presets/compare/2.0.1...2.1.0) (2026-06-23)
+
+
+### Features
+
+* add topf talosVersion ([#34](https://github.com/home-operations/renovate-presets/issues/34)) ([c86531b](https://github.com/home-operations/renovate-presets/commit/c86531b0d975d0c07b41bad3f827f62a022b61fb))
+
 ## [2.0.1](https://github.com/home-operations/renovate-presets/compare/2.0.0...2.0.1) (2026-06-22)
 
 
