@@ -12,10 +12,14 @@
       // File pattern targets the `talos/` directory convention used by
       // home-operations/cluster-template and similar layouts. Override
       // `managerFilePatterns` if your Talos configs live elsewhere.
-      description: "Process Talos Factory installer images",
+      description: "Process Talos Factory installer images and topf talosVersion",
       customType: "regex",
       managerFilePatterns: ["/talos\\/.*\\.ya?ml(?:\\.j2)?$/"],
-      matchStrings: ["factory\\.talos\\.dev\\/[^/]+\\/[^:]+:(?<currentValue>v\\S+)"],
+      matchStrings: [
+        "factory\\.talos\\.dev\\/[^/]+\\/[^:]+:(?<currentValue>v\\S+)",
+        // topf.yaml `talosVersion:` (bare or v-prefixed; topf trims the leading v)
+        "talosVersion:\\s*[\"']?(?<currentValue>v?[0-9][^\"'\\s]*)",
+      ],
       datasourceTemplate: "custom.talos-factory",
       versioningTemplate: "semver",
       depNameTemplate: "siderolabs/talos",
