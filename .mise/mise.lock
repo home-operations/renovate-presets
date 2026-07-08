@@ -76,7 +76,7 @@ version = "43.251.3"
 backend = "npm:renovate"
 
 [[tools.oxfmt]]
-version = "0.57.0"
+version = "0.58.0"
 backend = "npm:oxfmt"
 
 [[tools.shellcheck]]
