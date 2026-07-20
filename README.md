@@ -10,8 +10,8 @@ This repository ships **managers, overrides, and a small amount of commit-messag
 
 ```jsonc
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>home-operations/renovate-presets"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>home-operations/renovate-presets"],
 }
 ```
 
@@ -23,7 +23,7 @@ Use Renovate's path-based preset syntax (include the `.json5` extension since Re
 
 ```jsonc
 {
-    "extends": ["github>home-operations/renovate-presets//managers/cnpg.json5"],
+  "extends": ["github>home-operations/renovate-presets//managers/cnpg.json5"],
 }
 ```
 
