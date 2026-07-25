@@ -1,24 +1,30 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: Validate
+name: CI
 
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "**.md"
+      - ".release-please-manifest.json"
   pull_request:
     branches:
       - main
+  merge_group:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:
   contents: read
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
-
 jobs:
   validate:
+    name: Validate
     if: >-
       ${{ !(startsWith(github.head_ref, 'release-please--')
       && github.event.pull_request.head.repo.full_name == github.repository) }}
@@ -40,3 +46,21 @@ jobs:
 
       - name: Validate Renovate presets
         run: mise run validate default.json managers/*.json5 overrides/*.json5 versioning/*.json5 .renovaterc.json5
+
+  status:
+    if: ${{ !cancelled() }}
+    name: Build Success
+    needs:
+      - validate
+    runs-on: ubuntu-24.04
+    permissions: {}
+    steps:
+      - name: Any jobs failed?
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: |
+          exit 1
+
+      - name: All jobs passed or skipped?
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: |
+          echo "All jobs passed or skipped" && echo "${{ toJSON(needs.*.result) }}"
