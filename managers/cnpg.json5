@@ -15,14 +15,33 @@
       ],
       datasourceTemplate: "docker",
     },
+    {
+      // Tracks `Database.spec.extensions[].version` for vchord so it bumps alongside the
+      // vchord-scratch image — CNPG only runs `ALTER EXTENSION ... UPDATE` when this pin moves.
+      // The version field is bare semver; extractVersion strips the image's `pg<N>-v` tag prefix.
+      // Two match strings cover either field order (name-then-version and version-then-name);
+      // each skips continuation lines, comments and blank lines, but never a new `- ` item, so
+      // a sibling extension's version is never mis-attributed. No lookahead, so RE2 compiles both.
+      description: "Detect CNPG Database CRD vchord extension version pin",
+      customType: "regex",
+      managerFilePatterns: ["/.+\\.ya?ml(?:\\.j2)?$/"],
+      matchStrings: [
+        "name:\\s+vchord\\b(?:\\n[ \\t]*|\\n +[^-\\s][^\\n]*)*?\\n +version:\\s*[\"']?(?<currentValue>\\d+\\.\\d+\\.\\d+)[\"']?",
+        "version:\\s*[\"']?(?<currentValue>\\d+\\.\\d+\\.\\d+)[\"']?(?:\\n[ \\t]*|\\n +[^-\\s][^\\n]*)*?\\n +name:\\s+vchord\\b",
+      ],
+      depNameTemplate: "ghcr.io/tensorchord/vchord-scratch",
+      datasourceTemplate: "docker",
+      extractVersionTemplate: "^pg\\d+-v(?<version>.+)$",
+    },
   ],
   packageRules: [
     {
-      // Bump the `pg18` prefix when CNPG moves to a new postgres major.
+      // Optional `pg<N>-v` prefix: matches the image tag (pg18-v0.4.3) and the bare semver
+      // extracted from a Database version pin, and survives the pg-major rollover unedited.
       description: "vchord-scratch uses 'pg<N>-v<semver>' prefix",
       matchDatasources: ["docker"],
       matchPackageNames: ["ghcr.io/tensorchord/vchord-scratch"],
-      versioning: "regex:^pg18-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+      versioning: "regex:^(?:pg\\d+-v)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
     },
   ],
 }
