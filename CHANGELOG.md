@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0](https://github.com/home-operations/renovate-presets/compare/2.1.0...2.2.0) (2026-07-25)
+
+
+### Features
+
+* **cnpg:** track Database extension version pins; loosen vchord-scratch versioning ([#57](https://github.com/home-operations/renovate-presets/issues/57)) ([14023a0](https://github.com/home-operations/renovate-presets/commit/14023a02b9bc4710966be283293b1965019279d1))
+* **grafanaDashboards:** support grafana-operator GrafanaDashboard structured fields ([#58](https://github.com/home-operations/renovate-presets/issues/58)) ([2ad360c](https://github.com/home-operations/renovate-presets/commit/2ad360c785a7cb1c619a6d749eed61d48428ccb7))
+
 ## [2.1.0](https://github.com/home-operations/renovate-presets/compare/2.0.1...2.1.0) (2026-06-23)
 
 
