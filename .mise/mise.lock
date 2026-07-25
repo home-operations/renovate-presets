@@ -82,6 +82,9 @@ url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-win-x64.zip"
 version = "43.280.1"
 backend = "npm:renovate"
 
+[tools."npm:renovate".options]
+trust_policy_excludes = '["@yarnpkg/libzip"]'
+
 [[tools.oxfmt]]
 version = "0.60.0"
 backend = "npm:oxfmt"
