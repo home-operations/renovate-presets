@@ -3,7 +3,13 @@
 lefthook = "2.1.10"
 node = "26.5.0"
 oxfmt = "0.60.0"
-"npm:renovate" = "43.280.1"
+# @yarnpkg/libzip 3.2.2 shipped without provenance where 3.2.0 had it, so mise's
+# no-downgrade trust policy refuses the whole tree. It reaches us through
+# @yarnpkg/core, which requires ^3.2.2 — the floor, so no renovate version can
+# resolve past it. Drop the exclude once upstream publishes an attested release.
+"npm:renovate" = { version = "43.280.1", trust_policy_excludes = [
+  "@yarnpkg/libzip",
+] }
 shellcheck = "0.11.0"
 zizmor = "1.28.0"
 
