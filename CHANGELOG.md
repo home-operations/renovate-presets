@@ -1,5 +1,35 @@
 # Changelog
 
+## [3.0.0](https://github.com/home-operations/renovate-presets/compare/2.2.0...3.0.0) (2026-07-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **github-action:** Update action actions/stale (v10.4.0 ➔ v11.0.0) ([#71](https://github.com/home-operations/renovate-presets/issues/71))
+
+### Bug Fixes
+
+* **mise:** allow the @yarnpkg/libzip trust downgrade ([#64](https://github.com/home-operations/renovate-presets/issues/64)) ([6dac969](https://github.com/home-operations/renovate-presets/commit/6dac96982e7aaf39c9248eaacad0e373acbe3c1a))
+* **talosFactory:** ignore factory.talos.dev images matched by generic managers ([#72](https://github.com/home-operations/renovate-presets/issues/72)) ([47397e8](https://github.com/home-operations/renovate-presets/commit/47397e81ac29d89c5b7f0844301ba89c40780385))
+
+
+### Build System
+
+* **mise:** add actionlint and refresh the lockfile ([#67](https://github.com/home-operations/renovate-presets/issues/67)) ([1b3aece](https://github.com/home-operations/renovate-presets/commit/1b3aece62830cd1eb1747d759c53223cd46e3948))
+
+
+### Continuous Integration
+
+* gate pull requests on a single Build Success check ([#62](https://github.com/home-operations/renovate-presets/issues/62)) ([969f485](https://github.com/home-operations/renovate-presets/commit/969f4855df4cc675f15154b6324930b37395e862))
+* **github-action:** Update action actions/stale (v10.4.0 ➔ v11.0.0) ([#71](https://github.com/home-operations/renovate-presets/issues/71)) ([84c5488](https://github.com/home-operations/renovate-presets/commit/84c54883a967b0dc71b3e0c8fd2368e6b39764cb))
+* **github-action:** update action jdx/mise-action (v4.2.1 ➔ v4.2.3) ([#69](https://github.com/home-operations/renovate-presets/issues/69)) ([47be686](https://github.com/home-operations/renovate-presets/commit/47be6869485f9f52489faac9d3c37ff10923a6d1))
+* lint workflows with the shared composite action ([#68](https://github.com/home-operations/renovate-presets/issues/68)) ([c3a2850](https://github.com/home-operations/renovate-presets/commit/c3a2850a05fe3509947089dcb0216bc9b8ed3bde))
+
+
+### Miscellaneous Chores
+
+* standardize release-please changelog sections ([#70](https://github.com/home-operations/renovate-presets/issues/70)) ([7013a38](https://github.com/home-operations/renovate-presets/commit/7013a38c44d14330636e9a2dd253bd9194f85661))
+
 ## [2.2.0](https://github.com/home-operations/renovate-presets/compare/2.1.0...2.2.0) (2026-07-25)
 
 
