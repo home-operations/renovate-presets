@@ -125,7 +125,7 @@ checksum = "sha256:d3b2277dbcccfdf24ef6302928f64f484cff1d77a6d3caa3a28f4d20ce915
 url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-win-x64.zip"
 
 [[tools."npm:renovate"]]
-version = "43.280.1"
+version = "44.3.3"
 backend = "npm:renovate"
 
 [tools."npm:renovate".options]
