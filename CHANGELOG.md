@@ -1,5 +1,31 @@
 # Changelog
 
+## [4.0.0](https://github.com/home-operations/renovate-presets/compare/3.0.0...4.0.0) (2026-08-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mise:** Update tool npm:renovate (43.280.1 ➔ 44.3.3) ([#73](https://github.com/home-operations/renovate-presets/issues/73))
+
+### Bug Fixes
+
+* **ci:** fail the merge gate on cancelled jobs ([#76](https://github.com/home-operations/renovate-presets/issues/76)) ([eed270d](https://github.com/home-operations/renovate-presets/commit/eed270da100a55c89a243483d0bf98a4dc015c43))
+* **cnpg:** split image name on the last colon, not the first ([#81](https://github.com/home-operations/renovate-presets/issues/81)) ([f272fb4](https://github.com/home-operations/renovate-presets/commit/f272fb45fe6a82dc81e656f4106d6a716173ece5))
+
+
+### Continuous Integration
+
+* **github-action:** update workflow-lint action (1.0.0 → v1.0.2) ([#79](https://github.com/home-operations/renovate-presets/issues/79)) ([fefc15a](https://github.com/home-operations/renovate-presets/commit/fefc15a8706cd23cc9054113cedc6857dc4a1ace))
+
+
+### Miscellaneous Chores
+
+* **mise:** prune lockfile to used platforms ([#80](https://github.com/home-operations/renovate-presets/issues/80)) ([a6b77a9](https://github.com/home-operations/renovate-presets/commit/a6b77a9f264fe3968bdb7018a563abfa73a19787))
+* **mise:** update tool node (26.5.0 ➔ v26.5.1) ([#77](https://github.com/home-operations/renovate-presets/issues/77)) ([abb356e](https://github.com/home-operations/renovate-presets/commit/abb356ee00ee6f46d30f9bc6dbea8f6ee83fc1cd))
+* **mise:** Update tool npm:renovate (43.280.1 ➔ 44.3.3) ([#73](https://github.com/home-operations/renovate-presets/issues/73)) ([1ae0aa7](https://github.com/home-operations/renovate-presets/commit/1ae0aa72dccbbfa5bd90cce79e92a4aa6e30d730))
+* **mise:** update tool oxfmt (0.60.0 ➔ 0.61.0) ([#74](https://github.com/home-operations/renovate-presets/issues/74)) ([e9aafc6](https://github.com/home-operations/renovate-presets/commit/e9aafc637eebffdb4eeddced54d88595c9808d5b))
+* **release-please:** standardize the release pull request title pattern ([#78](https://github.com/home-operations/renovate-presets/issues/78)) ([6336341](https://github.com/home-operations/renovate-presets/commit/6336341ac2d93bf9576ddf36bbcc4fca8a4d0e24))
+
 ## [3.0.0](https://github.com/home-operations/renovate-presets/compare/2.2.0...3.0.0) (2026-07-28)
 
 
