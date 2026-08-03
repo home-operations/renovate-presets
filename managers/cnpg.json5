@@ -7,11 +7,31 @@
       // which is specific enough that false positives are rare in practice. If your repo has
       // unrelated YAML with `imageName:` or `reference:` followed by an image-like string,
       // override `managerFilePatterns` to scope this preset to your CNPG manifests.
+      //
+      // `depName` excludes `@` and `currentValue` excludes `/` so that the name/tag split lands
+      // on the LAST colon, which is the only one that introduces a tag. Both exclusions matter:
+      //
+      //   registry.local:5000/foo/bar:1.2.3   without the `/` exclusion this splits on the port
+      //                                       colon -> depName `registry.local`, currentValue
+      //                                       `5000/foo/bar:1.2.3`
+      //   ghcr.io/foo/bar@sha256:<64 hex>     without the `@` exclusion depName captures greedily
+      //                                       past the `@` -> `ghcr.io/foo/bar@sha256`, and the
+      //                                       digest is read as the version. Renovate then looks
+      //                                       up a package that cannot exist and reports it as a
+      //                                       lookup failure, which reads like a private-registry
+      //                                       or credentials problem rather than a parse one.
+      //
+      // Digest-only references are deliberately NOT matched. Such a reference carries no tag, so
+      // there is nothing to say WHICH line should be tracked — Renovate's kustomize manager
+      // resolves that ambiguity by assuming `:latest`, but versioned extension images frequently
+      // publish no `latest` at all, and guessing it in a shared preset would propose updates
+      // across an unrelated release line. Write `name:tag@digest` to keep a digest pin AND be
+      // explicit about what is tracked; that form is matched, with the digest captured below.
       description: "Detect CNPG Cluster CRD imageName + extension reference fields",
       customType: "regex",
       managerFilePatterns: ["/.+\\.ya?ml(?:\\.j2)?$/"],
       matchStrings: [
-        "(?:imageName|reference):\\s+(?<depName>[^:\\s]+):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?",
+        "(?:imageName|reference):\\s+(?<depName>[^@\\s]+):(?<currentValue>[^@\\s/]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?",
       ],
       datasourceTemplate: "docker",
     },
