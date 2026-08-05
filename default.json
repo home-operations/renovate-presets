@@ -16,6 +16,7 @@
     "github>home-operations/renovate-presets//overrides/mise.json5",
     "github>home-operations/renovate-presets//overrides/renovateOperator.json5",
     "github>home-operations/renovate-presets//policies/semanticCommits.json5",
+    "github>home-operations/renovate-presets//policies/zer0ver.json5",
     "github>home-operations/renovate-presets//versioning/llamacpp.json5",
     "github>home-operations/renovate-presets//versioning/phanpy.json5",
     "github>home-operations/renovate-presets//versioning/searxng.json5"
