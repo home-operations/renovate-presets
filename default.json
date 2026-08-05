@@ -1,24 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
+  "description": "Extend every general-purpose preset in this repo. App-specific presets under apps/ are opt-in.",
   "extends": [
     "github>home-operations/renovate-presets//config/baseConfig.json5",
     "github>home-operations/renovate-presets//config/dependencyDashboard.json5",
     "github>home-operations/renovate-presets//config/managerFilePatterns.json5",
     "github>home-operations/renovate-presets//config/registryAliases.json5",
     "github>home-operations/renovate-presets//managers/annotated.json5",
-    "github>home-operations/renovate-presets//managers/cnpg.json5",
-    "github>home-operations/renovate-presets//managers/grafanaDashboards.json5",
     "github>home-operations/renovate-presets//managers/oci.json5",
-    "github>home-operations/renovate-presets//managers/talosFactory.json5",
     "github>home-operations/renovate-presets//overrides/changelogs.json5",
     "github>home-operations/renovate-presets//overrides/helmfile.json5",
     "github>home-operations/renovate-presets//overrides/mise.json5",
     "github>home-operations/renovate-presets//overrides/renovateOperator.json5",
     "github>home-operations/renovate-presets//policies/semanticCommits.json5",
-    "github>home-operations/renovate-presets//policies/zer0ver.json5",
-    "github>home-operations/renovate-presets//versioning/llamacpp.json5",
-    "github>home-operations/renovate-presets//versioning/phanpy.json5",
-    "github>home-operations/renovate-presets//versioning/searxng.json5"
+    "github>home-operations/renovate-presets//policies/zer0ver.json5"
   ]
 }
