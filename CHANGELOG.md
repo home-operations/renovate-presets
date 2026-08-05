@@ -1,5 +1,26 @@
 # Changelog
 
+## [5.0.0](https://github.com/home-operations/renovate-presets/compare/4.0.0...5.0.0) (2026-08-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **policies:** treat zer0ver 0.x minors as breaking ([#85](https://github.com/home-operations/renovate-presets/issues/85))
+
+### Features
+
+* **policies:** treat zer0ver 0.x minors as breaking ([#85](https://github.com/home-operations/renovate-presets/issues/85)) ([3faf787](https://github.com/home-operations/renovate-presets/commit/3faf7877ae8c4b662176917d8cabe6e03d0580ee))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v4.2.3 ➔ v4.2.4) ([#82](https://github.com/home-operations/renovate-presets/issues/82)) ([6d41f4c](https://github.com/home-operations/renovate-presets/commit/6d41f4cfa51c78d6e59316e5d4498244eef7aabc))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool zizmor (1.28.0 ➔ 1.29.0) ([#83](https://github.com/home-operations/renovate-presets/issues/83)) ([f2e3659](https://github.com/home-operations/renovate-presets/commit/f2e3659ea7343ed52eb74d1660eb91623c6d6884))
+
 ## [4.0.0](https://github.com/home-operations/renovate-presets/compare/3.0.0...4.0.0) (2026-08-03)
 
 
