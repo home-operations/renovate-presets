@@ -1,5 +1,18 @@
 # Changelog
 
+## [6.0.0](https://github.com/home-operations/renovate-presets/compare/5.0.0...6.0.0) (2026-08-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* make app-specific presets opt-in under apps/ ([#86](https://github.com/home-operations/renovate-presets/issues/86))
+* **mise:** Update tool oxfmt (0.61.0 ➔ 0.62.0) ([#87](https://github.com/home-operations/renovate-presets/issues/87))
+
+### Features
+
+* make app-specific presets opt-in under apps/ ([#86](https://github.com/home-operations/renovate-presets/issues/86)) ([f865824](https://github.com/home-operations/renovate-presets/commit/f8658244cdfce86379dbc46c97bd6b0d78e86a48))
+* **mise:** Update tool oxfmt (0.61.0 ➔ 0.62.0) ([#87](https://github.com/home-operations/renovate-presets/issues/87)) ([f80f404](https://github.com/home-operations/renovate-presets/commit/f80f404ed39ee2151ff33093df3ff6706fa677e7))
+
 ## [5.0.0](https://github.com/home-operations/renovate-presets/compare/4.0.0...5.0.0) (2026-08-05)
 
 
