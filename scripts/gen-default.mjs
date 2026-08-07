@@ -2,7 +2,8 @@
 import { readdirSync, writeFileSync } from "node:fs";
 
 const REPO = "home-operations/renovate-presets";
-const DIRS = ["config", "managers", "overrides", "policies", "versioning"];
+// apps/ is deliberately absent: app-specific presets are opt-in.
+const DIRS = ["config", "managers", "overrides", "policies"];
 
 const extendsList = DIRS.flatMap((dir) =>
   readdirSync(dir)
@@ -14,7 +15,7 @@ const extendsList = DIRS.flatMap((dir) =>
 const out = {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description:
-    "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
+    "Extend every general-purpose preset in this repo. App-specific presets under apps/ are opt-in.",
   extends: extendsList,
 };
 
