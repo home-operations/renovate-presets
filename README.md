@@ -15,7 +15,7 @@ This repository ships **managers, overrides, and a small amount of update policy
 }
 ```
 
-The bare repo reference loads [`default.json`](./default.json), which extends every preset in this repo.
+The bare repo reference loads [`default.json`](./default.json). It is a single, self-contained preset taken as a set, so a tag on that reference pins all of it. Granularity lives in [`apps/`](./apps).
 
 ### Extend specific presets
 
@@ -33,14 +33,23 @@ Use Renovate's path-based preset syntax (include the `.json5` extension since Re
 "extends": ["github>home-operations/renovate-presets#1.0.0"]
 ```
 
-## Available presets
+A tag applies only to the reference it is written on, and Renovate has no
+relative preset syntax: a preset that referenced another file could never pass
+its tag along. `default.json` holds its rules directly, so one tag covers all of
+them, but an `apps/` preset needs its own tag or it floats on the default
+branch:
 
-Presets are grouped by intent. Each file is self-documenting — open it for the `description` and any caveats.
+```jsonc
+"extends": [
+  "github>home-operations/renovate-presets#1.0.0",
+  "github>home-operations/renovate-presets//apps/cnpg.json5#1.0.0",
+]
+```
 
+## Layout
+
+- [`default.json`](./default.json) — the defaults: stock Renovate presets, custom managers, package overrides and commit-message and zer0ver policy. Edit it directly; every rule carries a `description` explaining itself.
 - [`apps/`](./apps) — per-application presets (CNPG, Grafana dashboards, Talos factory, llama.cpp, Phanpy, SearXNG): custom managers and versioning schemes that only matter if you run the app. **Opt-in, not part of `default.json`.**
-- [`config/`](./config) — top-level Renovate config (registry aliases, built-in manager file-pattern extensions).
-- [`managers/`](./managers) — custom regex and datasource managers that pick up dependencies Renovate's built-in managers miss.
-- [`overrides/`](./overrides) — fixes to `depName`, `sourceUrl`, `packageName`, or `changelogUrl` for specific packages or managers.
-- [`policies/`](./policies) — opt-in `packageRules` for conventions: commit-message shaping and zer0ver (0.x minors treated as breaking). Extend only if you want the convention.
 
-[`default.json`](./default.json) lists every general-purpose preset; extend `apps/` presets explicitly.
+Both are flat and self-contained. No preset here references another file in this
+repo, which is what lets a single tag pin whatever you extend.
