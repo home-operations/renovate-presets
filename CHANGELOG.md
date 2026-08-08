@@ -1,5 +1,16 @@
 # Changelog
 
+## [7.0.0](https://github.com/home-operations/renovate-presets/compare/6.0.0...7.0.0) (2026-08-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* consolidate the general-purpose presets into default.json ([#89](https://github.com/home-operations/renovate-presets/issues/89))
+
+### Features
+
+* consolidate the general-purpose presets into default.json ([#89](https://github.com/home-operations/renovate-presets/issues/89)) ([8f8e06a](https://github.com/home-operations/renovate-presets/commit/8f8e06a3aa5b08acc505499efd47f73b089d62a9))
+
 ## [6.0.0](https://github.com/home-operations/renovate-presets/compare/5.0.0...6.0.0) (2026-08-07)
 
 
