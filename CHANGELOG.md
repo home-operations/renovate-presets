@@ -1,5 +1,34 @@
 # Changelog
 
+## [8.0.0](https://github.com/home-operations/renovate-presets/compare/7.0.0...8.0.0) (2026-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mise:** Update tool oxfmt (0.63.0 ➔ 0.64.0) ([#96](https://github.com/home-operations/renovate-presets/issues/96))
+* **mise:** Update tool oxfmt (0.62.0 ➔ 0.63.0) ([#93](https://github.com/home-operations/renovate-presets/issues/93))
+
+### Features
+
+* **mise:** Update tool oxfmt (0.62.0 ➔ 0.63.0) ([#93](https://github.com/home-operations/renovate-presets/issues/93)) ([3aaf514](https://github.com/home-operations/renovate-presets/commit/3aaf514bee15782a668b970f6fca2dc697f1bc7c))
+* **mise:** Update tool oxfmt (0.63.0 ➔ 0.64.0) ([#96](https://github.com/home-operations/renovate-presets/issues/96)) ([72512ec](https://github.com/home-operations/renovate-presets/commit/72512ec5a711e676f8687b85edb9b050ce46cef2))
+
+
+### Bug Fixes
+
+* **default:** scope helm-values manager to values and helmrelease files ([#97](https://github.com/home-operations/renovate-presets/issues/97)) ([6dffe9b](https://github.com/home-operations/renovate-presets/commit/6dffe9b181aa7f38ecb14cf995f6a1f8fa45d8f2))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v4.2.4 ➔ v4.2.5) ([#94](https://github.com/home-operations/renovate-presets/issues/94)) ([eb47fe5](https://github.com/home-operations/renovate-presets/commit/eb47fe521ff38e5a0605467dad59fd03d7c6cc5e))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool node (26.5.1 ➔ v26.7.0) ([#91](https://github.com/home-operations/renovate-presets/issues/91)) ([76bf82e](https://github.com/home-operations/renovate-presets/commit/76bf82ef0efa075b117cd0d4849114164b8ee777))
+* **mise:** update tool npm:renovate (44.3.3 ➔ 44.31.0) ([#95](https://github.com/home-operations/renovate-presets/issues/95)) ([2d8a714](https://github.com/home-operations/renovate-presets/commit/2d8a71479895e91df5a41d9e0c930044481fb4d5))
+
 ## [7.0.0](https://github.com/home-operations/renovate-presets/compare/6.0.0...7.0.0) (2026-08-08)
 
 
