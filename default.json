@@ -25,7 +25,8 @@
   "helm-values": {
     "managerFilePatterns": [
       "/(^|/)values\\.ya?ml(?:\\.j2)?$/",
-      "/(^|/)helmrelease\\.ya?ml(?:\\.j2)?$/"
+      "/(^|/)helmrelease\\.ya?ml(?:\\.j2)?$/",
+      "/(^|/)hr\\.ya?ml(?:\\.j2)?$/"
     ]
   },
   "helmfile": {
