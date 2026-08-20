@@ -3,7 +3,8 @@
   "description": [
     "Stock Renovate presets that form the base of this bundle. Listed alphabetically first so subsequent presets in this repo can override.",
     "Brand the Renovate dependency dashboard issue with a distinctive title so it's easy to spot among other issues.",
-    "Extend the built-in flux, helm-values, and kubernetes managers to also scan Jinja-templated YAML (`.yaml.j2` / `.yml.j2`).",
+    "Extend the built-in flux and kubernetes managers to also scan Jinja-templated YAML (`.yaml.j2` / `.yml.j2`).",
+    "Scope the helm-values manager to values and Flux HelmRelease files (plus their `.j2` variants) so bare `image:` lines elsewhere aren't double-extracted alongside the kubernetes manager, which inflates grouped-update counts (e.g. `minimumGroupSize`).",
     "Resolve `mirror.gcr.io` references against Docker Hub so Renovate finds tags and digests via the upstream registry.",
     "Extend every general-purpose preset in this repo. App-specific presets under apps/ are opt-in."
   ],
@@ -23,7 +24,9 @@
   },
   "helm-values": {
     "managerFilePatterns": [
-      "/\\.ya?ml(?:\\.j2)?$/"
+      "/(^|/)values\\.ya?ml(?:\\.j2)?$/",
+      "/(^|/)helmrelease\\.ya?ml(?:\\.j2)?$/",
+      "/(^|/)hr\\.ya?ml(?:\\.j2)?$/"
     ]
   },
   "helmfile": {
