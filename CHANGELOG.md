@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.1.0](https://github.com/home-operations/renovate-presets/compare/8.0.0...8.1.0) (2026-08-21)
+
+
+### Features
+
+* **default:** match helm-release.yaml in the helm-values manager ([#98](https://github.com/home-operations/renovate-presets/issues/98)) ([9a44e5f](https://github.com/home-operations/renovate-presets/commit/9a44e5f416fe999c7028d92d98b9eba10be83086))
+
 ## [8.0.0](https://github.com/home-operations/renovate-presets/compare/7.0.0...8.0.0) (2026-08-20)
 
 
