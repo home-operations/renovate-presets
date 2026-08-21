@@ -26,6 +26,7 @@
     "managerFilePatterns": [
       "/(^|/)values\\.ya?ml(?:\\.j2)?$/",
       "/(^|/)helmrelease\\.ya?ml(?:\\.j2)?$/",
+      "/(^|/)helm-release\\.ya?ml(?:\\.j2)?$/",
       "/(^|/)hr\\.ya?ml(?:\\.j2)?$/"
     ]
   },
