@@ -3,7 +3,7 @@
 actionlint = "1.7.12"
 lefthook = "2.1.11"
 node = "26.7.0"
-oxfmt = "0.64.0"
+oxfmt = "0.65.0"
 # @yarnpkg/libzip 3.2.2 shipped without provenance where 3.2.0 had it, so mise's
 # no-downgrade trust policy refuses the whole tree. It reaches us through
 # @yarnpkg/core, which requires ^3.2.2 — the floor, so no renovate version can
