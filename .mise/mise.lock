@@ -68,7 +68,7 @@ backend = "npm:renovate"
 trust_policy_excludes = '["@yarnpkg/libzip"]'
 
 [[tools.oxfmt]]
-version = "0.64.0"
+version = "0.65.0"
 backend = "npm:oxfmt"
 
 [[tools.shellcheck]]
