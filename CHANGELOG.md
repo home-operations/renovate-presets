@@ -1,5 +1,33 @@
 # Changelog
 
+## [9.0.0](https://github.com/home-operations/renovate-presets/compare/8.1.0...9.0.0) (2026-09-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mise:** Update tool oxfmt (0.65.0 ➔ 0.66.0) ([#108](https://github.com/home-operations/renovate-presets/issues/108))
+* **mise:** Update tool oxfmt (0.64.0 ➔ 0.65.0) ([#103](https://github.com/home-operations/renovate-presets/issues/103))
+
+### Features
+
+* **mise:** Update tool oxfmt (0.64.0 ➔ 0.65.0) ([#103](https://github.com/home-operations/renovate-presets/issues/103)) ([7615a5c](https://github.com/home-operations/renovate-presets/commit/7615a5ceadb7f735c43378c1730f1d223e4de3e4))
+* **mise:** Update tool oxfmt (0.65.0 ➔ 0.66.0) ([#108](https://github.com/home-operations/renovate-presets/issues/108)) ([0f9aab1](https://github.com/home-operations/renovate-presets/commit/0f9aab101e506afeddebb43a0ee289c28709f463))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v4.2.5 ➔ v4.3.0) ([#104](https://github.com/home-operations/renovate-presets/issues/104)) ([69004fe](https://github.com/home-operations/renovate-presets/commit/69004fe37ad60d63593d454af0788b5296b19a92))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool lefthook (2.1.10 ➔ 2.1.11) ([#100](https://github.com/home-operations/renovate-presets/issues/100)) ([bbc4750](https://github.com/home-operations/renovate-presets/commit/bbc47502406f0cb76ee5216c0b4faf76161d3d2f))
+* **mise:** update tool lefthook (2.1.11 ➔ 2.1.12) ([#106](https://github.com/home-operations/renovate-presets/issues/106)) ([6dee378](https://github.com/home-operations/renovate-presets/commit/6dee3781b854b3da97c522b728ea7e3812cd0cfa))
+* **mise:** update tool node (26.7.0 ➔ v26.8.1) ([#105](https://github.com/home-operations/renovate-presets/issues/105)) ([8c80cae](https://github.com/home-operations/renovate-presets/commit/8c80cae659da10ed51daca72eaa2e97f72c10bb9))
+* **mise:** update tool npm:renovate (44.31.0 ➔ 44.39.2) ([#102](https://github.com/home-operations/renovate-presets/issues/102)) ([eef1609](https://github.com/home-operations/renovate-presets/commit/eef1609724ca1659e13fa3300fe59ad65d1c10ab))
+* **mise:** update tool npm:renovate (44.39.2 ➔ 44.65.5) ([#109](https://github.com/home-operations/renovate-presets/issues/109)) ([d59d050](https://github.com/home-operations/renovate-presets/commit/d59d050c6a1b2dde6a1fc7e516c637c9ff75013b))
+* **mise:** update tool zizmor (1.29.0 ➔ 1.30.0) ([#107](https://github.com/home-operations/renovate-presets/issues/107)) ([0836a1c](https://github.com/home-operations/renovate-presets/commit/0836a1cf4ba3d472eb6970c081addab54ea2d551))
+
 ## [8.1.0](https://github.com/home-operations/renovate-presets/compare/8.0.0...8.1.0) (2026-08-21)
 
 
