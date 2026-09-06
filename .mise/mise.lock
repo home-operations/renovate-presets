@@ -61,7 +61,7 @@ checksum = "sha256:6e577fd0d9db776db82306629e441a9dace416702622aebdd171c9dfaa41f
 url = "https://nodejs.org/dist/v26.8.1/node-v26.8.1-darwin-arm64.tar.gz"
 
 [[tools."npm:renovate"]]
-version = "44.39.2"
+version = "44.65.5"
 backend = "npm:renovate"
 
 [tools."npm:renovate".options]
