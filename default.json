@@ -164,6 +164,13 @@
       "commitMessageTopic": "chart {{depName}}"
     },
     {
+      "matchDepTypes": [
+        "HelmChart"
+      ],
+      "semanticCommitScope": "helm",
+      "commitMessageTopic": "chart {{depName}}"
+    },
+    {
       "matchManagers": [
         "github-actions"
       ],
