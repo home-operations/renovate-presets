@@ -1,5 +1,22 @@
 # Changelog
 
+## [10.0.0](https://github.com/home-operations/renovate-presets/compare/9.0.0...10.0.0) (2026-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Update dependency oxfmt (0.73.0 ➔ 0.74.0) ([#139](https://github.com/home-operations/renovate-presets/issues/139))
+
+### Features
+
+* **deps:** Update dependency oxfmt (0.73.0 ➔ 0.74.0) ([#139](https://github.com/home-operations/renovate-presets/issues/139)) ([10f1685](https://github.com/home-operations/renovate-presets/commit/10f1685f053a375b7ca6823f5193df8ddd541754))
+* **phanpy:** handle upstream releases and container images ([503638d](https://github.com/home-operations/renovate-presets/commit/503638d979e35592550d51f1766fdb66a8e29595))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v5.2.0 ➔ v5.2.1) ([#138](https://github.com/home-operations/renovate-presets/issues/138)) ([3b572a4](https://github.com/home-operations/renovate-presets/commit/3b572a4c973a512ca1a6d715806b688b9794b08e))
+
 ## [9.0.0](https://github.com/home-operations/renovate-presets/compare/8.1.0...9.0.0) (2026-10-19)
 
 
