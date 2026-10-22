@@ -1,5 +1,22 @@
 # Changelog
 
+## [10.0.1](https://github.com/home-operations/renovate-presets/compare/10.0.0...10.0.1) (2026-10-22)
+
+
+### Bug Fixes
+
+* **grafanaDashboards:** rewrite grafanaCom fields with supported capture groups ([#141](https://github.com/home-operations/renovate-presets/issues/141)) ([e8eee2a](https://github.com/home-operations/renovate-presets/commit/e8eee2ac4f3265b83795eb3cd0c2744915bf7925))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v5.2.1 ➔ v5.2.2) ([#143](https://github.com/home-operations/renovate-presets/issues/143)) ([e6028ed](https://github.com/home-operations/renovate-presets/commit/e6028ed4991c2ddc4c88651745684adb562869f2))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool node (26.12.0 ➔ v26.12.1) ([#142](https://github.com/home-operations/renovate-presets/issues/142)) ([7ae4f28](https://github.com/home-operations/renovate-presets/commit/7ae4f28968862219fc950247780791fd50c27d6b))
+
 ## [10.0.0](https://github.com/home-operations/renovate-presets/compare/9.0.0...10.0.0) (2026-10-21)
 
 
