@@ -23,9 +23,10 @@
     },
     {
       // grafana-operator's GrafanaDashboard CR expresses the same dependency as structured
-      // `spec.grafanaCom.{id,revision}` fields instead of a download URL. Everything between the
-      // two keys is captured in `gap` and replayed verbatim, so blank lines and comments survive
-      // the update, inline ones included.
+      // `spec.grafanaCom.{id,revision}` fields instead of a download URL. Renovate drops every
+      // named capture group outside its fixed set, so only `indentation` can be replayed by the
+      // replacement template. The keys must therefore be adjacent with nothing else on their lines;
+      // a comment or blank line between them leaves the dashboard untracked rather than mangled.
       //
       // Both keys must sit at the same indent or the match would escape the mapping and rewrite an
       // unrelated `revision:` further up the document. Renovate compiles match strings with RE2,
@@ -40,14 +41,14 @@
       customType: "regex",
       managerFilePatterns: ["/grafanadashboard\\.ya?ml(?:\\.j2)?$/"],
       matchStrings: [
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {2})id:\\s*(?<depName>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {2})revision:\\s*(?<currentValue>\\d+)",
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {4})id:\\s*(?<depName>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {4})revision:\\s*(?<currentValue>\\d+)",
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {6})id:\\s*(?<depName>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {6})revision:\\s*(?<currentValue>\\d+)",
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {8})id:\\s*(?<depName>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {8})revision:\\s*(?<currentValue>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {2})id:[ \\t]*(?<depName>\\d+)[ \\t]*\\n {2}revision:[ \\t]*(?<currentValue>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {4})id:[ \\t]*(?<depName>\\d+)[ \\t]*\\n {4}revision:[ \\t]*(?<currentValue>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {6})id:[ \\t]*(?<depName>\\d+)[ \\t]*\\n {6}revision:[ \\t]*(?<currentValue>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {8})id:[ \\t]*(?<depName>\\d+)[ \\t]*\\n {8}revision:[ \\t]*(?<currentValue>\\d+)",
       ],
       datasourceTemplate: "custom.grafana-dashboards",
       versioningTemplate: "regex:^(?<major>\\d+)$",
-      autoReplaceStringTemplate: "grafanaCom:{{{pad}}}\n{{{indent}}}id: {{{depName}}}{{{gap}}}revision: {{{newValue}}}",
+      autoReplaceStringTemplate: "grafanaCom:\n{{{indentation}}}id: {{{depName}}}\n{{{indentation}}}revision: {{{newValue}}}",
     },
     {
       // Same as above with the keys reversed (revision before id).
@@ -55,14 +56,14 @@
       customType: "regex",
       managerFilePatterns: ["/grafanadashboard\\.ya?ml(?:\\.j2)?$/"],
       matchStrings: [
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {2})revision:\\s*(?<currentValue>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {2})id:\\s*(?<depName>\\d+)",
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {4})revision:\\s*(?<currentValue>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {4})id:\\s*(?<depName>\\d+)",
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {6})revision:\\s*(?<currentValue>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {6})id:\\s*(?<depName>\\d+)",
-        "grafanaCom:(?<pad>[^\\n]*)\\n(?<indent> {8})revision:\\s*(?<currentValue>\\d+)(?<gap>[ \\t]*(?:#[^\\n]*)?(?:\\n[ \\t]*(?:#[^\\n]*)?)*?\\n {8})id:\\s*(?<depName>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {2})revision:[ \\t]*(?<currentValue>\\d+)[ \\t]*\\n {2}id:[ \\t]*(?<depName>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {4})revision:[ \\t]*(?<currentValue>\\d+)[ \\t]*\\n {4}id:[ \\t]*(?<depName>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {6})revision:[ \\t]*(?<currentValue>\\d+)[ \\t]*\\n {6}id:[ \\t]*(?<depName>\\d+)",
+        "grafanaCom:[ \\t]*\\n(?<indentation> {8})revision:[ \\t]*(?<currentValue>\\d+)[ \\t]*\\n {8}id:[ \\t]*(?<depName>\\d+)",
       ],
       datasourceTemplate: "custom.grafana-dashboards",
       versioningTemplate: "regex:^(?<major>\\d+)$",
-      autoReplaceStringTemplate: "grafanaCom:{{{pad}}}\n{{{indent}}}revision: {{{newValue}}}{{{gap}}}id: {{{depName}}}",
+      autoReplaceStringTemplate: "grafanaCom:\n{{{indentation}}}revision: {{{newValue}}}\n{{{indentation}}}id: {{{depName}}}",
     },
   ],
   packageRules: [
