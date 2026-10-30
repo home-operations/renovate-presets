@@ -1,5 +1,33 @@
 # Changelog
 
+## [11.0.0](https://github.com/home-operations/renovate-presets/compare/10.0.1...11.0.0) (2026-10-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Update dependency oxfmt (0.74.0 ➔ 0.75.0) ([#149](https://github.com/home-operations/renovate-presets/issues/149))
+
+### Features
+
+* **deps:** Update dependency oxfmt (0.74.0 ➔ 0.75.0) ([#149](https://github.com/home-operations/renovate-presets/issues/149)) ([661289a](https://github.com/home-operations/renovate-presets/commit/661289aaf84bb0cb57f26990a7936f88211a0431))
+
+
+### Bug Fixes
+
+* **llamacpp:** match plain server-b00000 tags ([#147](https://github.com/home-operations/renovate-presets/issues/147)) ([446fa54](https://github.com/home-operations/renovate-presets/commit/446fa54ed6e142507be9017de92a0e53d52703de))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v5.2.2 ➔ v5.2.3) ([#146](https://github.com/home-operations/renovate-presets/issues/146)) ([8048116](https://github.com/home-operations/renovate-presets/commit/8048116872cc665504b9ee779b3ba1ef5da7b1a0))
+* **github-action:** update action jdx/mise-action (v5.2.3 ➔ v5.2.4) ([#148](https://github.com/home-operations/renovate-presets/issues/148)) ([c27a7b9](https://github.com/home-operations/renovate-presets/commit/c27a7b906f453c9d903670ea0311610b4ebe98fa))
+* mark issues and PRs stale after 180 days, close 14 days later ([934de6a](https://github.com/home-operations/renovate-presets/commit/934de6a507209725ef5bae0cf8b245676dd7bb5e))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool node (26.12.1 ➔ v26.13.0) ([#150](https://github.com/home-operations/renovate-presets/issues/150)) ([dd36b21](https://github.com/home-operations/renovate-presets/commit/dd36b21037cc07a287aca0ace3a14635e509f449))
+
 ## [10.0.1](https://github.com/home-operations/renovate-presets/compare/10.0.0...10.0.1) (2026-10-22)
 
 
