@@ -1,5 +1,37 @@
 # Changelog
 
+## [11.0.0](https://github.com/home-operations/renovate-presets/compare/10.0.1...11.0.0) (2026-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Update dependency oxfmt (0.74.0 ➔ 0.75.0) ([#149](https://github.com/home-operations/renovate-presets/issues/149))
+
+### Features
+
+* **deps:** Update dependency oxfmt (0.74.0 ➔ 0.75.0) ([#149](https://github.com/home-operations/renovate-presets/issues/149)) ([661289a](https://github.com/home-operations/renovate-presets/commit/661289aaf84bb0cb57f26990a7936f88211a0431))
+* **deps:** update dependency renovate (44.198.3 ➔ 44.199.0) ([#152](https://github.com/home-operations/renovate-presets/issues/152)) ([ffe05b2](https://github.com/home-operations/renovate-presets/commit/ffe05b2dd2ed6d9b0804aeb153c0a8b901f26b45))
+* **talosFactory:** keep proposing Talos patch updates after the next minor ships ([#154](https://github.com/home-operations/renovate-presets/issues/154)) ([a52e082](https://github.com/home-operations/renovate-presets/commit/a52e0825716851d9b84222e4d811631e5927523b))
+
+
+### Bug Fixes
+
+* **llamacpp:** match plain server-b00000 tags ([#147](https://github.com/home-operations/renovate-presets/issues/147)) ([446fa54](https://github.com/home-operations/renovate-presets/commit/446fa54ed6e142507be9017de92a0e53d52703de))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v5.2.2 ➔ v5.2.3) ([#146](https://github.com/home-operations/renovate-presets/issues/146)) ([8048116](https://github.com/home-operations/renovate-presets/commit/8048116872cc665504b9ee779b3ba1ef5da7b1a0))
+* **github-action:** update action jdx/mise-action (v5.2.3 ➔ v5.2.4) ([#148](https://github.com/home-operations/renovate-presets/issues/148)) ([c27a7b9](https://github.com/home-operations/renovate-presets/commit/c27a7b906f453c9d903670ea0311610b4ebe98fa))
+* **github-action:** update action jdx/mise-action (v5.2.4 ➔ v5.2.5) ([#153](https://github.com/home-operations/renovate-presets/issues/153)) ([ce2a3d5](https://github.com/home-operations/renovate-presets/commit/ce2a3d5177a39b2c3491ab25c5c418c93aa36e23))
+* mark issues and PRs stale after 180 days, close 14 days later ([934de6a](https://github.com/home-operations/renovate-presets/commit/934de6a507209725ef5bae0cf8b245676dd7bb5e))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool node (26.12.1 ➔ v26.13.0) ([#150](https://github.com/home-operations/renovate-presets/issues/150)) ([dd36b21](https://github.com/home-operations/renovate-presets/commit/dd36b21037cc07a287aca0ace3a14635e509f449))
+* **mise:** update tool npm:renovate (44.115.10 ➔ 44.198.3) ([#151](https://github.com/home-operations/renovate-presets/issues/151)) ([1ddc4c3](https://github.com/home-operations/renovate-presets/commit/1ddc4c311b213a480ec0ed19f5859b22cf7cf713))
+
 ## [10.0.1](https://github.com/home-operations/renovate-presets/compare/10.0.0...10.0.1) (2026-10-22)
 
 
