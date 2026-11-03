@@ -37,5 +37,10 @@
       semanticCommitScope: "container",
       commitMessageTopic: "{{depName}}",
     },
+    {
+      description: "Talos upgrades must pass through the latest patch of each minor, so keep proposing patches after the next minor ships",
+      matchDatasources: ["custom.talos-factory"],
+      separateMinorPatch: true,
+    },
   ],
 }
