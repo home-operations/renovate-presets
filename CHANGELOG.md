@@ -1,5 +1,36 @@
 # Changelog
 
+## [12.0.0](https://github.com/home-operations/renovate-presets/compare/11.0.0...12.0.0) (2026-11-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Update dependency oxfmt (0.77.0 ➔ 0.78.0) ([#163](https://github.com/home-operations/renovate-presets/issues/163))
+* **deps:** Update dependency oxfmt (0.76.0 ➔ 0.77.0) ([#162](https://github.com/home-operations/renovate-presets/issues/162))
+* **deps:** Update dependency oxfmt (0.75.0 ➔ 0.76.0) ([#160](https://github.com/home-operations/renovate-presets/issues/160))
+
+### Features
+
+* **deps:** Update dependency oxfmt (0.75.0 ➔ 0.76.0) ([#160](https://github.com/home-operations/renovate-presets/issues/160)) ([e73d18a](https://github.com/home-operations/renovate-presets/commit/e73d18a459b6ae2c381ee586086eb56283192863))
+* **deps:** Update dependency oxfmt (0.76.0 ➔ 0.77.0) ([#162](https://github.com/home-operations/renovate-presets/issues/162)) ([47a85b6](https://github.com/home-operations/renovate-presets/commit/47a85b6beb80bcf67b7a1bcfe68cc0150f407e07))
+* **deps:** Update dependency oxfmt (0.77.0 ➔ 0.78.0) ([#163](https://github.com/home-operations/renovate-presets/issues/163)) ([fb79a62](https://github.com/home-operations/renovate-presets/commit/fb79a62ce240b3ca8273ecc3cf18e99027aa0f92))
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v5.2.5 ➔ v5.2.6) ([#157](https://github.com/home-operations/renovate-presets/issues/157)) ([c9d0af8](https://github.com/home-operations/renovate-presets/commit/c9d0af8abf78635728f2c3b3f5231be8ae19b361))
+* **github-action:** update action jdx/mise-action (v5.2.6 ➔ v5.2.7) ([#161](https://github.com/home-operations/renovate-presets/issues/161)) ([b460152](https://github.com/home-operations/renovate-presets/commit/b4601523e353c1553b4d593301637787bbd7c1e9))
+* **github-action:** update action jdx/mise-action (v5.2.7 ➔ v5.2.8) ([#165](https://github.com/home-operations/renovate-presets/issues/165)) ([264a600](https://github.com/home-operations/renovate-presets/commit/264a600bf74e77fa19a648d7d54daf0fbf77b98a))
+* **github-action:** update action zizmorcore/zizmor-action (v0.8.0 ➔ v0.8.1) ([#158](https://github.com/home-operations/renovate-presets/issues/158)) ([5598752](https://github.com/home-operations/renovate-presets/commit/559875296ec06e82ef0feb23f8e9735d0356bedd))
+* replace the shared workflow-lint action with zizmor-action ([dc1399e](https://github.com/home-operations/renovate-presets/commit/dc1399ecb2747a52cbaccbb4064d5687762dc849))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool node (26.13.0 ➔ v26.13.1) ([#164](https://github.com/home-operations/renovate-presets/issues/164)) ([acb5f1f](https://github.com/home-operations/renovate-presets/commit/acb5f1fec68fd310875ee803d1446554ec170c34))
+* **mise:** update tool npm:renovate (44.198.3 ➔ 44.216.0) ([#156](https://github.com/home-operations/renovate-presets/issues/156)) ([2bd55cf](https://github.com/home-operations/renovate-presets/commit/2bd55cfe7b659295d7495d17337bafec3b74afda))
+* **mise:** update tool zizmor (1.31.1 ➔ 1.32.0) ([#159](https://github.com/home-operations/renovate-presets/issues/159)) ([f67adc3](https://github.com/home-operations/renovate-presets/commit/f67adc3ed1fdcd185f2049c80f2c72cb38356fd4))
+
 ## [11.0.0](https://github.com/home-operations/renovate-presets/compare/10.0.1...11.0.0) (2026-11-03)
 
 
