@@ -16,7 +16,9 @@
     ":dependencyDashboard",
     ":disableRateLimiting"
   ],
-  "dependencyDashboardTitle": "Renovate Dashboard 🤖",
+  "dependencyDashboard": {
+    "title": "Renovate Dashboard 🤖"
+  },
   "flux": {
     "managerFilePatterns": [
       "/\\.ya?ml(?:\\.j2)?$/"
