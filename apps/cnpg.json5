@@ -58,10 +58,12 @@
     {
       // Optional `pg<N>-v` prefix: matches the image tag (pg18-v0.4.3) and the bare semver
       // extracted from a Database version pin, and survives the pg-major rollover unedited.
+      // The PostgreSQL major is the compatibility: each release ships one tag per major, and an
+      // extension built for another major does not load.
       description: "vchord-scratch uses 'pg<N>-v<semver>' prefix",
       matchDatasources: ["docker"],
       matchPackageNames: ["ghcr.io/tensorchord/vchord-scratch"],
-      versioning: "regex:^(?:pg\\d+-v)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+      versioning: "regex:^(?:pg(?<compatibility>\\d+)-v)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
     },
   ],
 }
