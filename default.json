@@ -123,12 +123,13 @@
       "sourceUrl": "https://github.com/mogenius/renovate-operator"
     },
     {
+      "description": "Closing a PR only ignores updates whose title matches it, so a major title must not change with each release.",
       "matchUpdateTypes": [
         "major"
       ],
       "semanticCommitType": "feat",
       "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:",
-      "commitMessageExtra": "({{currentVersion}} ➔ {{newVersion}})"
+      "commitMessageExtra": "to {{prettyNewMajor}}"
     },
     {
       "matchUpdateTypes": [
