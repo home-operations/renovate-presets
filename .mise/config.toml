@@ -9,7 +9,7 @@ node = "26.13.1"
 # no-downgrade trust policy refuses the whole tree. It reaches us through
 # @yarnpkg/core, which requires ^3.2.2 — the floor, so no renovate version can
 # resolve past it. Drop the exclude once upstream publishes an attested release.
-"npm:renovate" = { version = "44.256.1", trust_policy_excludes = [
+"npm:renovate" = { version = "44.257.4", trust_policy_excludes = [
   "@yarnpkg/libzip",
 ] }
 shellcheck = "0.11.0"
