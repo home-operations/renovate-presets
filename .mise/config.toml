@@ -13,7 +13,7 @@ node = "26.13.1"
   "@yarnpkg/libzip",
 ] }
 shellcheck = "0.11.0"
-zizmor = "1.33.0"
+zizmor = "1.33.1"
 
 [tasks.lint]
 description = "Check JSON/JSON5, YAML, Markdown, and shell formatting"
